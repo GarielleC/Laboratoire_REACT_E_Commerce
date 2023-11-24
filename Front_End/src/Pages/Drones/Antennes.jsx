@@ -1,6 +1,16 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { GetDetails } from '../../components/servcies/api';
 
 const Antennes = ({ nom, frequence, descriptionProduit, typeAntenne, compatibleDrones, categorie, poids, profondeur, equipementRaccords, stock }) => {
+  const getProduct = async () =>{
+    const response = await GetDetails()
+    console.log(response)
+  }
+  useEffect(() => {
+    getProduct()
+  
+  },[]);
   return (
     <div className="antenne-article">
       <h2>{nom}</h2>

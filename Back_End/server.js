@@ -8,7 +8,7 @@ const router = require('./Routers/router');
 // création du serveur WebAPI
 const app = express();
 //Utilisation du cors
-app.use(cors());
+app.use(cors({    origin: '*'}));
 app.use(express.json());
 
 // Routing

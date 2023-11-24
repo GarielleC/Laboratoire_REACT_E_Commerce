@@ -24,19 +24,19 @@ panierRouter.route('/delete/:id')
         res.status(500).send('Unavailable');
     });
 
-    // Route pour valider le traitement 
-router.post('/traiter', validateCart, (req, res) => {
-  // Si la validation réussit, on peut accéder aux informations du panier
-  const completeCart = req.body.completeCart;
+//     // Route pour valider le traitement 
+// panierRouter.post('/traiter', validateCart, (req, res) => {
+//   // Si la validation réussit, on peut accéder aux informations du panier
+// //   const completeCart = req.body.completeCart;
 
-  // Traitez le panier comme nécessaire
-  // ...
+//   // Traitez le panier comme nécessaire
 
-  // Envoie une réponse réussie
-  res.json({ success: true, message: 'Le panier a été traité avec succès.' });
-});
 
-module.exports = router;
+//   // Envoie une réponse réussie
+//   res.json({ success: true, message: 'Le panier a été traité avec succès.' });
+// });
+
+
 
 
 module.exports = panierRouter;
