@@ -1,0 +1,32 @@
+import React from 'react';
+import Rating from 'react-rating-stars-component';
+
+function CommentList({ commentaires }) {
+  return (
+    <article className="comment">
+      <h1>Commentaires clients</h1>
+      <div className="carre">
+        <ul>
+          {commentaires.map((comment, index) => (
+            <li key={index}>
+              {/* Affichage du prénom et de la note associés à chaque commentaire */}
+              {comment.prenom} {comment.nom} :{' '}
+              {/* Utilisation de la composante Rating pour afficher la note en étoiles */}
+              <Rating
+                value={comment.note}
+                count={5} // Nombre d'étoiles maximum
+                size={24} // Taille des étoiles
+                edit={false} // Empêche l'édition de la note
+              />
+              {/* Affichage du message associé à chaque commentaire */}
+              <p>Commentaire de cette personne :</p>
+              <p>{comment.message}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+}
+
+export default CommentList;

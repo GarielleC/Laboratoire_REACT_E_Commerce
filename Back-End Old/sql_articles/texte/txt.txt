@@ -1,0 +1,28 @@
+-- -- -- Création de la table Antennes
+-- CREATE TABLE Antennes (
+--   ID INT PRIMARY KEY IDENTITY(1, 1),
+--   Nom NVARCHAR(50),
+--   Image NVARCHAR(255),
+--   BreveDescription NVARCHAR(30),
+--   -- Prix DECIMAL(10, 2) CHECK (Prix >= 0),
+--   Specification NVARCHAR(300),
+--   CompatibleDrones NVARCHAR(100), 
+--   Poids DECIMAL(6, 2),  
+--   Profondeur DECIMAL(6, 2), 
+--   -- CouleurFabricant NVARCHAR(50), 
+--   EquipementRaccords NVARCHAR(100)  
+-- );
+-- -- -- Insertion des données
+-- INSERT INTO Antennes (Nom, Image, BreveDescription, Specification, CompatibleDrones, Poids, Profondeur, EquipementRaccords)
+-- VALUES (
+--   'Antenne omnidirectionnelle Foxeer LHCP 5.8 GHz',
+--   'foxeer-antenna.jpg',
+--   'Omnidirectionnelle LHCP 5.8 GHz',
+--   -- 24.99,
+--   'Fréquence : 5.8 GHz, Polarisation : LHCP, Type d''antenne : Omnidirectionnelle',
+--   'Compatible avec drones Foxeer, DJI, etc.',
+--   10.5,  -- Poids en grammes
+--   6.8,   -- Profondeur en centimètres
+--   -- 'Noire',  -- Couleur selon le fabricant (couleurFrabricant)
+--   'Connecteur SMA'  -- Équipement (raccords)
+-- );
