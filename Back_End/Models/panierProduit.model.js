@@ -9,7 +9,7 @@ const createPanierProduct = (sequelize) => {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
-        prix: {
+        price: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },

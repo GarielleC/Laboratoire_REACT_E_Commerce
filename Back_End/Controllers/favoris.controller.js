@@ -10,10 +10,10 @@ const favorisController = {
 
     addProduct: async (req, res) => {
         try {
-            const { name, prix, stock } = req.body;
-            console.log(name, prix, stock);
+            const { name, price, stock } = req.body;
+            console.log(name, price, stock);
    
-            const newProduct = await db.Favoris.create({ 'name': name, 'prix': prix, 'stock': stock });
+            const newProduct = await db.Favoris.create({ 'name': name, 'price': price, 'stock': stock });
             res.status(201).json(newProduct);
         } catch (error) {
             res.status(500).send({ error: error.message });

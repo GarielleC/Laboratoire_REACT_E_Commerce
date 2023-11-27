@@ -33,6 +33,25 @@ const productController = {
                 return res.status(404).json({ message: 'Product not found' });
             }
 
+            const finalProduct = {
+                id: product.id,
+                name: product.name,
+                description: product.description,
+                price: product.prix,
+                stock: product.stock,
+                othersInformations: [
+                    {categorie: product.categorie},
+                    {frequency: product.frequency},
+                    {weight: product.weight},
+                    {antennaType: product.antennaType},
+                    {depth: product.depth},
+                    {fittingsEquipment: product.fittingsEquipment},
+                ],
+                createdAt: product.createdAt,
+                updatedAt: product.updatedAt
+            }
+            console.log(finalProduct);
+
             res.json(product);
         } catch (error) {
             res.status(500).json({ error: error.message });

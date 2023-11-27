@@ -9,7 +9,7 @@ productRouter.route('/getAll')
         res.status(405).send('Unavailable');
     });
  
-productRouter.route('/get')
+productRouter.route('/get/:productID')
     .get(productController.getProduct) // Utilisez .get() au lieu de .post() pour la route /get si vous voulez récupérer des produits
     .all((req, res) => {
         res.status(405).send('Unavailable');

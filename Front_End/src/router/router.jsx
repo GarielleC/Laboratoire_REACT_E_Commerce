@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from 'react-router-dom';
 import App from '../App.jsx';
 import Home from '../Pages/Home/Home.jsx';
 import About from '../Pages/About/About.jsx';
 import Antennes from '../Pages/Drones/Antennes.jsx';
-import Batteries_FPV from '../Pages/Drones/Antennes.jsx';
+import Batteries_FPV from '../Pages/Drones/Batteries_FPV.jsx';
 import Cameras_FPV from '../Pages/Drones/Cameras_FPV.jsx';
 import Chassis_FPV from '../Pages/Drones/Chassis_FPV.jsx';
 import ESC_FPV from '../Pages/Drones/ESC_FPV.jsx';
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
                 element: <About />,
             },
             {
-                path: "antennes",
+                path: "drones/antennes",
                 element: <Antennes />,
             },
             {
