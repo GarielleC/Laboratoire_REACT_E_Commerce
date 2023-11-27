@@ -2,7 +2,7 @@ class productDTO {
 
     name;
     description;
-    prix;
+    price;
     categorie;
     othersInformations;
     stock;
@@ -11,7 +11,7 @@ class productDTO {
     constructor(data) {
         this.name = data.name;
         this.description = data.description;
-        this.prix = data.prix;
+        this.price = data.price;
         this.categorie = data.categorie;
         this.othersInformations = data.othersInformations;
         this.stock = data.stock;

@@ -7,8 +7,8 @@ const panierService = {
 
     addProductToCart: async (productDetails) => {
         try {
-            const { name, prix, quantite } = productDetails;
-            const newProduct = await PanierProduct.create({ name, prix, quantite });
+            const { name, price, quantite } = productDetails;
+            const newProduct = await PanierProduct.create({ name, price, quantite });
             return newProduct;
         } catch (error) {
             throw new Error(`Unable to add product to cart: ${error.message}`);
