@@ -51,6 +51,3 @@ const createProduct = (sequelize) => {
 };
 
 module.exports = createProduct;
-// Product.belongs(Panier, {
-//     through: 'PanierProduit'
-// });
