@@ -16,6 +16,11 @@ panierRouter.route('/get')
     .all((req, res) => {
         res.status(500).send('Non disponible');
     });
+    panierRouter.route('/getAll')
+    .get(panierController.getAllProduct) 
+    .all((req, res) => {
+        res.status(405).send('Unavailable');
+    });
 
     //Route panier pour supprimer un produit dedans
 panierRouter.route('/delete/:id')
