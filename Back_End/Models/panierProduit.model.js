@@ -17,7 +17,7 @@ const createPanierProduct = (sequelize) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        prixTotal: {
+        priceTotal: {
             type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0,
@@ -50,8 +50,8 @@ const createPanierProduct = (sequelize) => {
             where: { PanierId: panierId },
         });
 
-        const prixTotal = panierProducts.reduce((acc, panierProduct) => {
-            return acc + panierProduct.prixTotal;
+        const priceTotal = panierProducts.reduce((acc, panierProduct) => {
+            return acc + panierProduct.priceTotal;
         }, 0);
 
         const totalArticles = panierProducts.reduce((acc, panierProduct) => {
@@ -59,7 +59,7 @@ const createPanierProduct = (sequelize) => {
         }, 0);
 
         await Panier.update({
-            prixTotal: prixTotal,
+            priceTotal: priceTotal,
             totalArticles: totalArticles,
         }, {
             where: { id: panierId },
