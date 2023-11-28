@@ -9,7 +9,7 @@ const createPanierProduct = (sequelize) => {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
-        price: {
+        prix: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -17,7 +17,7 @@ const createPanierProduct = (sequelize) => {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        priceTotal: {
+        prixTotal: {
             type: DataTypes.INTEGER,
             allowNull: false,
             defaultValue: 0,
@@ -34,24 +34,24 @@ const createPanierProduct = (sequelize) => {
             // Exécute après la création de chaque enregistrement.
             afterCreate: async (createdPanierProduct, options) => {
                 // Mise à jour le prix total et le nombre total d'articles
-                await updateTotalPriceAndTotalArticles(createdPanierProduct.PanierId);
+                await updateTotalPrixAndTotalArticles(createdPanierProduct.PanierId);
             },
             // Exécute après chaque mise à jour d'enregistrement
             afterUpdate: async (updatedPanierProduct, options) => {
                 // Mise à jour le prix total et le nombre total d'articles
-                await updateTotalPriceAndTotalArticles(updatedPanierProduct.PanierId);
+                await updateTotalPrixAndTotalArticles(updatedPanierProduct.PanierId);
             },
         },
     });
 
     // Fonction pour mettre à jour le prix total et le nombre total d'articles dans le panier
-    async function updateTotalPriceAndTotalArticles(panierId) {
+    async function updateTotalPrixAndTotalArticles(panierId) {
         const panierProducts = await PanierProduct.findAll({
             where: { PanierId: panierId },
         });
 
         const priceTotal = panierProducts.reduce((acc, panierProduct) => {
-            return acc + panierProduct.priceTotal;
+            return acc + panierProduct.prixTotal;
         }, 0);
 
         const totalArticles = panierProducts.reduce((acc, panierProduct) => {
@@ -59,7 +59,7 @@ const createPanierProduct = (sequelize) => {
         }, 0);
 
         await Panier.update({
-            priceTotal: priceTotal,
+            prixTotal: prixTotal,
             totalArticles: totalArticles,
         }, {
             where: { id: panierId },

@@ -12,10 +12,10 @@ const favorisService = {
     addProductToCart: async (productDetails) => {
         try {
             // Extraire les détails du produit à ajouter
-            const { name, price, quantite } = productDetails;
+            const { name, prix, quantite } = productDetails;
 
             // Créer un nouveau produit dans les favoris
-            const newProduct = await FavorisProduct.create({ name, price, quantite });
+            const newProduct = await FavorisProduct.create({ name, prix, quantite });
 
             return newProduct;
         } catch (error) {

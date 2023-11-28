@@ -22,7 +22,7 @@ const createProduct = (sequelize) => {
             allowNull: false,
         },
 
-        price: {
+        prix: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
@@ -34,7 +34,41 @@ const createProduct = (sequelize) => {
 
         othersInformations: {
             type: DataTypes.STRING,
-            allowNull: false,
+            allowNull: true,
+        },
+
+        categorie: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+
+        frequency:{
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        
+        weight:{
+            type: DataTypes.STRING,
+            allowNull: true,
+
+        },
+
+        antennaType:{
+            type: DataTypes.STRING,
+            allowNull: true,
+
+        },
+
+        depth:{
+            type: DataTypes.STRING,
+            allowNull: true,
+
+        },
+
+        fittingsEquipment:{
+            type: DataTypes.STRING,
+            allowNull: true,
+
         },
 
         stock: {

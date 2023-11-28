@@ -10,8 +10,8 @@ const panierController = {
 
     addProduct: async (req, res) => {
         try {
-            const { nom, price, stock } = req.body;
-            console.log(nom, price, stock);
+            const { nom, prix, stock } = req.body;
+            console.log(nom, prix, stock);
             const newProduct = await db.Panier.create({ 'name': nom, 'price': price, 'stock': stock });
             res.status(201).json(newProduct);
         } catch (error) {

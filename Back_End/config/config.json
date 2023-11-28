@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "Data_Login",
+    "password": "Dronesandcars123",
+    "database": "Laboratoire",
+    "host": "127.0.0.1",
+    "dialect": "mssql"
+  },
+  "test": {
+    "username": "Data_Login",
+    "password": "Dronesandcars123",
+    "database": "Laboratoire",
+    "host": "127.0.0.1",
+    "dialect": "mssql"
+  },
+  "production": {
+    "username": "Data_Login",
+    "password": "Dronesandcars123",
+    "database": "Laboratoire",
+    "host": "127.0.0.1",
+    "dialect": "mssql"
+  }
+}

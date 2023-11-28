@@ -37,7 +37,7 @@ const productController = {
                 id: product.id,
                 name: product.name,
                 description: product.description,
-                price: product.price,
+                prix: product.prix,
                 stock: product.stock,
                 othersInformations: [
                     {categorie: product.categorie},
@@ -60,10 +60,10 @@ const productController = {
 
     createProduct: async (req, res) => {
         try {
-            const { name, description, price, categorie, othersInformations, stock } = req.body;
+            const { name, description, prix, categorie, othersInformations, stock } = req.body;
     
             // Vérifiez si toutes les propriétés nécessaires sont présentes
-            if (!name || !description || !price || !categorie || !stock) {
+            if (!name || !description || !prix || !categorie || !stock) {
                 return res.status(400).json({ message: 'Missing required fields' });
             }
     
@@ -89,7 +89,7 @@ const productController = {
     updateProduct: async (req, res) => {
         try {
             const productId = Number(req.params.productID);
-            const { name, description, price, categorie, othersInformations, stock } = req.body;
+            const { name, description, prix, categorie, othersInformations, stock } = req.body;
 
             const product = await Product.findByPk(productId);
 

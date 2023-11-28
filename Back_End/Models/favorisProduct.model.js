@@ -9,7 +9,7 @@ const createFavorisProduct = (sequelize) => {
             type: DataTypes.STRING(100),
             allowNull: false,
         },
-        price: {
+        prix: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },

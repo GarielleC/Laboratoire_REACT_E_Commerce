@@ -3,7 +3,7 @@ import { GetDetails } from '../../components/servcies/api';
 import AntennesInfo from '../../components/DronesInfos/AntennesInfo';
 
 
-const Antennes = ({ nom, stock }) => {
+const Antennes = ({ name, stock }) => {
     const [productDetails, setProductDetails] = useState(null);
 
     const getProduct = async (id) => {

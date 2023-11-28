@@ -1,13 +1,13 @@
 class panierDTO {
 
     name;
-    price;
+    prix;
     stock;
 
 
     constructor(data) {
         this.name = data.name;
-        this.price = data.price;
+        this.prix = data.prix;
         this.stock = data.stock;
         
     }
