@@ -31,22 +31,21 @@ const productDetailssInfo = () => {
     // Rendu du composant
   return (
     <div>
-      
+      <h1>Informations sur l'productDetails</h1>
       {productDetails && (
-        
-        <>
-        <h3>{productDetails.name}</h3>
-                    {/* <p>Nom: {productDetails.name}</p> */}
-                    <p><strong>Fréquence:</strong> {productDetails.frequency}</p>
-                    <p><strong>Description:</strong> {productDetails.description}</p>
-                    <p><strong>Type d'antenne:</strong> {productDetails.antennaType}</p> 
-                    <p><strong>Compatible avec drones:</strong> {productDetails.compatibleDrones}</p>
-                    <p><strong>Catégorie:</strong> {productDetails.categorie}</p>
-                    <p><strong>Poids:</strong> {productDetails.weight} g</p>
-                    <p><strong>Profondeur:</strong> {productDetails.depth} cm</p>
-                    <p><strong>Équipement raccords:</strong> {productDetails.fittingsEquipment}</p>
-                    <p><strong>Prix:</strong> {productDetails.prix}</p>
-                    <p><strong>Stock disponible:</strong> {productDetails.stock}</p>
+                <>
+                    <p>Nom: {productDetails.name}</p>
+<p><strong>Description:</strong> {productDetails.description}</p>
+<p><strong>Type de batterie:</strong> {productDetails.batteryType}</p>
+<p><strong>Capacité:</strong> {productDetails.capacity} mAh</p>
+<p><strong>Tension:</strong> {productDetails.voltage} V</p>
+<p><strong>Nombre de cellules:</strong> {productDetails.cellCount}</p>
+<p><strong>Décharge continue maximale:</strong> {productDetails.maxContinuousDischarge} C</p>
+<p><strong>Décharge en impulsion maximale:</strong> {productDetails.maxBurstDischarge} C</p>
+<p><strong>Connecteur:</strong> {productDetails.connectorType}</p>
+<p><strong>Prix:</strong> {productDetails.prix}</p>
+<p><strong>Stock disponible:</strong> {productDetails.stock}</p>
+
                 </>
             )}
     </div>

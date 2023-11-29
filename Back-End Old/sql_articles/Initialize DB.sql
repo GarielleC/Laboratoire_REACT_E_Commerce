@@ -19,92 +19,92 @@ CREATE TABLE Antennes (
 
 
 -- NUMERIQUE : Antenne omnidirectionnelle Foxeer LHCP 5.8 GHz
-INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, Poids, Profondeur, EquipementRaccords, Stock)
-VALUES (
-  'Antenne omnidirectionnelle Foxeer LHCP 5.8 GHz', 
-  'image_drone.jpg', 
-  'Fréquence : 5.8 GHz', 
-  'L''Antenne Foxeer LHCP 5.8 GHz assure une réception vidéo stable, idéale pour drones FPV.',
-  'Omnidirectionnelle pour numérique',   
-  'Compatible avec drones Foxeer, DJI, etc.' ,
-  6.8 , 
-  10.5, 
-  'Connecteur SMA',
-  50
-);
+-- INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, Poids, Profondeur, EquipementRaccords, Stock)
+-- VALUES (
+--   'Antenne omnidirectionnelle Foxeer LHCP 5.8 GHz', 
+--   'image_drone.jpg', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''Antenne Foxeer LHCP 5.8 GHz assure une réception vidéo stable, idéale pour drones FPV.',
+--   'Omnidirectionnelle pour numérique',   
+--   'Compatible avec drones Foxeer, DJI, etc.' ,
+--   6.8 , 
+--   10.5, 
+--   'Connecteur SMA',
+--   50
+-- );
 
 -- Antenne TBS Triumph PRO - RHCP (SMA)
-INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, Poids, Profondeur, EquipementRaccords, Stock)
-VALUES (
-  'Antenne TBS Triumph PRO - RHCP (SMA)', 
-  'image_antenne_tbs.jpg', 
-  'Fréquence : 5.8 GHz', 
-  'L''antenne TBS Triumph PRO - RHCP (SMA) est une omnidirectionnelle 5.8 GHz de qualité supérieure, offrant une réception vidéo stable pour le FPV. Conçue pour une compatibilité étendue, elle garantit des performances fiables.',
-  'Omnidirectionnelle pour numérique',   
-  'Compatible avec drones TBS, DJI, etc.' ,
-  6.8 , 
-  10.5 ,
-  'Connecteur SMA',
-  500
-);
+-- INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, Poids, Profondeur, EquipementRaccords, Stock)
+-- VALUES (
+--   'Antenne TBS Triumph PRO - RHCP (SMA)', 
+--   'image_antenne_tbs.jpg', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''antenne TBS Triumph PRO - RHCP (SMA) est une omnidirectionnelle 5.8 GHz de qualité supérieure, offrant une réception vidéo stable pour le FPV. Conçue pour une compatibilité étendue, elle garantit des performances fiables.',
+--   'Omnidirectionnelle pour numérique',   
+--   'Compatible avec drones TBS, DJI, etc.' ,
+--   6.8 , 
+--   10.5 ,
+--   'Connecteur SMA',
+--   500
+-- );
 
 -- Antenne VAS 5,8GHz Ion Pro FPV Antenne longue avec adaptateur SMA RHCP
-INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Stock)
-VALUES (
-  'Antenne VAS 5,8GHz Ion Pro FPV Antenne longue avec adaptateur SMA RHCP', 
-  'image_antenne_vas.jpg', 
-  'Fréquence : 5.8 GHz', 
-  'L''Antenne VAS 5,8GHz Ion Pro FPV est une antenne longue avec adaptateur SMA RHCP, idéale pour une réception vidéo FPV de qualité supérieure. Conçue pour une performance optimale et une compatibilité étendue avec différents drones.',
-  'Omnidirectionnelle pour numérique',   
-  'Compatible avec une variété de drones FPV' ,
-  'Adaptateur SMA RHCP',
-  30
-);
+-- INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Stock)
+-- VALUES (
+--   'Antenne VAS 5,8GHz Ion Pro FPV Antenne longue avec adaptateur SMA RHCP', 
+--   'image_antenne_vas.jpg', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''Antenne VAS 5,8GHz Ion Pro FPV est une antenne longue avec adaptateur SMA RHCP, idéale pour une réception vidéo FPV de qualité supérieure. Conçue pour une performance optimale et une compatibilité étendue avec différents drones.',
+--   'Omnidirectionnelle pour numérique',   
+--   'Compatible avec une variété de drones FPV' ,
+--   'Adaptateur SMA RHCP',
+--   30
+-- );
 
 -- ANALOGIQUE : Antenne Foxeer ECHO Patch 8 dBi 5.8 GHz LHCP
-INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Poids, Profondeur, Stock)
-VALUES (
-  'Antenne Foxeer ECHO Patch 8 dBi 5.8 GHz LHCP', 
-  'image_antenne_foxeer_echo_patch.jpg', 
-  'Fréquence : 5.8 GHz', 
-  'L''Antenne Foxeer ECHO Patch 8 dBi 5.8 GHz LHCP est une antenne directionnelle LHCP de haute qualité conçue pour offrir une réception vidéo FPV fiable et une portée étendue. Elle est idéale pour les courses de drones et les vols exigeants.',
-  'Patch (Directionnelle)',
-  'Compatible avec une variété de drones FPV',
-  'Connecteur LHCP',
-  8,
-  40,
-  400
-);
+-- INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Poids, Profondeur, Stock)
+-- VALUES (
+--   'Antenne Foxeer ECHO Patch 8 dBi 5.8 GHz LHCP', 
+--   'image_antenne_foxeer_echo_patch.jpg', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''Antenne Foxeer ECHO Patch 8 dBi 5.8 GHz LHCP est une antenne directionnelle LHCP de haute qualité conçue pour offrir une réception vidéo FPV fiable et une portée étendue. Elle est idéale pour les courses de drones et les vols exigeants.',
+--   'Patch (Directionnelle)',
+--   'Compatible avec une variété de drones FPV',
+--   'Connecteur LHCP',
+--   8,
+--   40,
+--   400
+-- );
 
 -- Antenne eachine k-loverleaves 5.8g 5dbi 6 leaf clover antenna rhcp sma/rp-sma 
 INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Poids, Profondeur, Stock)
 VALUES (
-  'Antenne Eachine K-Loverleaves 5.8 GHz 5 dBi 6 Leaf Clover Antenna RHCP', 
-  'eachine.png', 
-  'Fréquence : 5.8 GHz', 
-  'L''Antenne Eachine K-Loverleaves 5.8 GHz 5 dBi 6 Leaf Clover Antenna RHCP est une antenne omnidirectionnelle RHCP de haute qualité conçue pour offrir une réception vidéo stable pour les drones FPV analogiques. Elle est idéale pour une variété de drones analogiques et est compatible avec les connecteurs SMA et RP-SMA.',
-  'Omnidirectionnelle pour analogique',   
-  'Compatible avec une variété de drones FPV analogiques',
-  'Connecteur SMA/RP-SMA',
-  5.0, 
-  60.0, 
-  100
-);
+--   'Antenne Eachine K-Loverleaves 5.8 GHz 5 dBi 6 Leaf Clover Antenna RHCP', 
+--   'eachine.png', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''Antenne Eachine K-Loverleaves 5.8 GHz 5 dBi est une antenne omnidirectionnelle RHCP de qualité pour une réception vidéo stable sur les drones FPV analogiques. Compatible avec les connecteurs SMA et RP-SMA, elle s''adapte parfaitement à divers drones.',
+--   'Omnidirectionnelle pour analogique',   
+--   'Compatible avec une variété de drones FPV analogiques',
+--   'Connecteur SMA/RP-SMA',
+--   5.0, 
+--   60.0, 
+--   100
+-- );
 
 -- Antenne Lumenier AXII 2 
 INSERT INTO Antennes (NomProduit, Image, Frequence, DescriptionProduit, TypeAntenne, CompatibleDrones, EquipementRaccords, Poids, Profondeur, Stock)
 VALUES (
-  'Antenne Lumenier AXII 2 5.8 GHz', 
-  'image_lumenier_axii2.jpg', 
-  'Fréquence : 5.8 GHz', 
-  'L''Antenne Lumenier AXII 2 est une antenne omnidirectionnelle de haute qualité conçue pour offrir une réception vidéo stable pour les drones FPV analogiques en 5.8 GHz. Elle est réputée pour sa durabilité et sa performance. Compatible avec les connecteurs SMA et RP-SMA.',
-  'Omnidirectionnelle pour analogique',   
-  'Compatible avec une variété de drones FPV analogiques',
-  'Connecteur SMA/RP-SMA',
-  6.5, 
-  70.0, 
-  20
-);
+--   'Antenne Lumenier AXII 2 5.8 GHz', 
+--   'image_lumenier_axii2.jpg', 
+--   'Fréquence : 5.8 GHz', 
+--   'L''Antenne Lumenier AXII 2 est une antenne omnidirectionnelle de haute qualité conçue pour offrir une réception vidéo stable pour les drones FPV analogiques en 5.8 GHz. Elle est réputée pour sa durabilité et sa performance. Compatible avec les connecteurs SMA et RP-SMA.',
+--   'Omnidirectionnelle pour analogique',   
+--   'Compatible avec une variété de drones FPV analogiques',
+--   'Connecteur SMA/RP-SMA',
+--   6.5, 
+--   70.0, 
+--   20
+-- );
 
 
 -- -- -- Création de la table Batterie
