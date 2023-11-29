@@ -27,8 +27,8 @@ productRouter.route('/update')
         res.status(405).send('Unavailable');
     });
 
-productRouter.route('/delete')
-    .post(productController.deleteProduct)
+productRouter.route('/delete/productID')
+    .delete(productController.deleteProduct)
     .all((req, res) => {
         res.status(405).send('Unavailable');
     });

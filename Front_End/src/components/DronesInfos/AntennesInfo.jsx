@@ -1,43 +1,54 @@
-import React from 'react';
-import Antennes from '../../Pages/Drones/Antennes';
+import { useState, useEffect} from 'react';
+import { GetDetails } from '../servcies/api';
+import { useParams } from 'react-router-dom';
 
-const AntennesInfo = (props) => {
+const productDetailssInfo = () => {
 
-    const antenne = props.props;
-    console.log(antenne);
-//   const antenneInfo = {
-//     nom: 'Antenne Foxeer LHCP 5.8 GHz',
-//     frequence: 'Fréquence : 5.8 GHz',
-//     descriptionProduit: 'L\'Antenne Foxeer LHCP 5.8 GHz assure une réception vidéo stable, idéale pour drones FPV.',
-//     typeAntenne: 'Omnidirectionnelle pour numérique',
-//     compatibleDrones: 'Compatible avec drones Foxeer, DJI, etc. (Pour numérique)',
-//     categorie: 'Numérique',
-//     poids: 6.8,
-//     profondeur: 10.5,
-//     equipementRaccords: 'Connecteur SMA',
-//     stock: 50,
-//   };
+  // Récupérer l'ID du produit depuis les paramètres de l'URL
+  const { id } = useParams();
 
+  // État pour stocker les détails du produit
+    const [ productDetails, setProductDetails] = useState({});
+
+    // Fonction asynchrone pour obtenir les détails du produit
+    const getProduct = async (id) => {
+      // Appeler la fonction GetDetails de l'API
+      const response = await GetDetails(id);
+       // Afficher la réponse dans la console (à des fins de débogage)
+      console.log(response);
+      if (response) {
+          setProductDetails(response)
+      }
+  }
+ // Afficher les détails du produit dans la console (à des fins de débogage)
+  console.log(productDetails && productDetails);
+
+  // Utiliser useEffect pour appeler getProduct lorsque l'ID change
+  useEffect(() => {
+    id ? getProduct(id) : null;
+  }, [])
+
+    // Rendu du composant
   return (
     <div>
-      <h1>Informations sur l'Antenne</h1>
-      {antenne && (
+      <h1>Informations sur l'productDetails</h1>
+      {productDetails && (
                 <>
-                    <p>Nom: {antenne.name}</p>
-                    <p><strong>Fréquence:</strong> {antenne.frequency}</p>
-                    <p><strong>Description:</strong> {antenne.description}</p>
-                    <p><strong>Type d'antenne:</strong> {antenne.antennaType}</p> 
-                    <p><strong>Compatible avec drones:</strong> {antenne.compatibleDrones}</p>
-                    <p><strong>Catégorie:</strong> {antenne.categorie}</p>
-                    <p><strong>Poids:</strong> {antenne.weight} g</p>
-                    <p><strong>Profondeur:</strong> {antenne.depth} cm</p>
-                    <p><strong>Équipement raccords:</strong> {antenne.fittingsEquipment}</p>
-                    <p><strong>Prix:</strong> {antenne.prix}</p>
-                    <p><strong>Stock disponible:</strong> {antenne.stock}</p>
+                    <p>Nom: {productDetails.name}</p>
+                    <p><strong>Fréquence:</strong> {productDetails.frequency}</p>
+                    <p><strong>Description:</strong> {productDetails.description}</p>
+                    <p><strong>Type d'productDetails:</strong> {productDetails.antennaType}</p> 
+                    <p><strong>Compatible avec drones:</strong> {productDetails.compatibleDrones}</p>
+                    <p><strong>Catégorie:</strong> {productDetails.categorie}</p>
+                    <p><strong>Poids:</strong> {productDetails.weight} g</p>
+                    <p><strong>Profondeur:</strong> {productDetails.depth} cm</p>
+                    <p><strong>Équipement raccords:</strong> {productDetails.fittingsEquipment}</p>
+                    <p><strong>Prix:</strong> {productDetails.prix}</p>
+                    <p><strong>Stock disponible:</strong> {productDetails.stock}</p>
                 </>
             )}
     </div>
   );
 };
 
-export default AntennesInfo;
+export default productDetailssInfo;

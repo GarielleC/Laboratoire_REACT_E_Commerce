@@ -26,6 +26,7 @@ import LoadingPage from '../../src/Pages/LoadingPage/Loading.jsx';
 import AddComment from '../Pages/AddComment/add.jsx';
 import CommentList from '../Pages/Comment/comment.jsx';
 import Panier from '../components/Panier/panier.jsx';
+import AntennesInfo from '../components/DronesInfos/AntennesInfo.jsx';
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: "drones/antennes",
                 element: <Antennes />,
+            },
+            {
+                path: "drones/antennes/details/:id",
+                element: <AntennesInfo />,
             },
             {
                 path: "batteries-fpv",

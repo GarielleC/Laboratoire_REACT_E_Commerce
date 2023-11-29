@@ -10,3 +10,14 @@ export const GetDetails = async (productID) => {
     return [];
   }
 }
+
+export const GetAllDrones = async () => {
+  try {
+    const result = await axios.get('http://localhost:8080/api/product/getAll');
+    if (result) {
+      return result.data;
+    } 
+  } catch (error) {
+    console.error('Error fetching Product data:', error);
+  }
+}

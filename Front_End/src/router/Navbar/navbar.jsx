@@ -57,16 +57,16 @@ const BasicMenu = () => {
           'aria-labelledby': 'menu-drones',
         }}
       >
-        <MenuItem component={Link} to="/Drones/Antennes" onClick={handleClose}>Antennes</MenuItem>
-        <MenuItem component={Link} to="/Drones/Batteries_FPV" onClick={handleClose}>Batteries</MenuItem>
-        <MenuItem component={Link} to="/Drones/Cameras_FPV" onClick={handleClose}>Caméras</MenuItem>
-        <MenuItem component={Link} to="/Drones/Chassis_FPV" onClick={handleClose}>Chassis</MenuItem>
-        <MenuItem component={Link} to="/Drones/ESC" onClick={handleClose}>ESC</MenuItem>
-        <MenuItem component={Link} to="/Drones/FC" onClick={handleClose}>FC</MenuItem>
-        <MenuItem component={Link} to="/Drones/Moteurs" onClick={handleClose}>Moteurs</MenuItem>
-        <MenuItem component={Link} to="/Drones/Radios_FPV" onClick={handleClose}>Radios</MenuItem>
-        <MenuItem component={Link} to="/Drones/Recepteurs" onClick={handleClose}>Récepteurs</MenuItem>
-        <MenuItem component={Link} to="/Drones/Systemes_videos" onClick={handleClose}>Systèmes vidéos</MenuItem>
+        <MenuItem component={Link} to="/drones/antennes" onClick={handleClose}>Antennes</MenuItem>
+        <MenuItem component={Link} to="/drones/batteries_FPV" onClick={handleClose}>Batteries</MenuItem>
+        <MenuItem component={Link} to="/drones/cameras_FPV" onClick={handleClose}>Caméras</MenuItem>
+        <MenuItem component={Link} to="/drones/chassis_FPV" onClick={handleClose}>Chassis</MenuItem>
+        <MenuItem component={Link} to="/drones/ESC" onClick={handleClose}>ESC</MenuItem>
+        <MenuItem component={Link} to="/drones/FC" onClick={handleClose}>FC</MenuItem>
+        <MenuItem component={Link} to="/drones/moteurs" onClick={handleClose}>Moteurs</MenuItem>
+        <MenuItem component={Link} to="/drones/radios_FPV" onClick={handleClose}>Radios</MenuItem>
+        <MenuItem component={Link} to="/drones/recepteurs" onClick={handleClose}>Récepteurs</MenuItem>
+        <MenuItem component={Link} to="/drones/systemes_videos" onClick={handleClose}>Systèmes vidéos</MenuItem>
       </Menu>
 
       {/* Menu pour la voiture */}

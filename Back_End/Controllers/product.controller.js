@@ -55,11 +55,6 @@ const productController = {
         try {
             const { name, description, prix, categorie, othersInformations, stock } = req.body;
             console.log(othersInformations.map(infos => infos.frequency).toString());
-    
-            // // Vérifiez si toutes les propriétés nécessaires sont présentes
-            // if (!name || !description || !prix || !categorie || !stock) {
-            //     return res.status(400).json({ message: 'Missing required fields' });
-            // }
            
             const newProduct = await Product.create({
                 name,
@@ -102,18 +97,17 @@ const productController = {
                 name,
                 description,
                 prix,
-                categorie,
-                othersInformations: {
-                    categorie: othersInformations && othersInformations.categorie,
-                    frequency: othersInformations && othersInformations.frequency,
-                    weight: othersInformations && othersInformations.weight,
-                    antennaType: othersInformations && othersInformations.antennaType,
-                    depth: othersInformations && othersInformations.depth,
-                    compatibleDrones: othersInformations && othersInformations.compatibleDrones,
-                    fittingsEquipment: othersInformations && othersInformations.fittingsEquipment,
-                },
+                
+                        categorie: othersInformations.map(infos => infos.categorie).toString(),
+                        frequency: othersInformations.map(infos => infos.frequency).toString(),
+                        weight: othersInformations.map(infos => infos.weight).toString(),
+                        antennaType: othersInformations.map(infos => infos.antennaType).toString(),
+                        depth: othersInformations.map(infos => infos.depth).toString(),
+                        compatibleDrones:othersInformations.map(infos => infos.compatibleDrones).toString(),
+                        fittingsEquipment: othersInformations.map(infos => infos.fittingEquipment).toString(),
                 stock
-            });
+                },
+            );
 
             res.status(200).json({ message: 'Product updated' });
         } catch (error) {
