@@ -12,7 +12,7 @@ const Antennes = ({ name, stock }) => {
     };
 
     useEffect(() => {
-        getProduct(1);
+        getProduct(16);
     }, []);
 
     return (

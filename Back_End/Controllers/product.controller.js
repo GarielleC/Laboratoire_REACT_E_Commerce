@@ -2,6 +2,7 @@ const express = require("express");
 // const router = express.Router();
 
 const { Product } = require('../Models');
+const { STRING } = require("sequelize");
 
 const productController = {
 
@@ -14,16 +15,7 @@ const productController = {
                     res.status(500).send({ error: error.message });
                 }
             },
-    // getProduct: async (req, res) => {
-    //     try {
-    //         const products = await Product.findAll();
-    //         res.json(products);
-    //     } catch (error) {
-    //         console.error(error);
-    //         res.status(500).json({ error: error.message });
-    //     }
-    // },
-
+   
     getProduct: async (req, res) => {
         try {
             const productId = Number(req.params.productID);
@@ -44,6 +36,7 @@ const productController = {
                     {frequency: product.frequency},
                     {weight: product.weight},
                     {antennaType: product.antennaType},
+                    {compatibleDrones: product.compatibleDrones},
                     {depth: product.depth},
                     {fittingsEquipment: product.fittingsEquipment},
                 ],
@@ -61,18 +54,25 @@ const productController = {
     createProduct: async (req, res) => {
         try {
             const { name, description, prix, categorie, othersInformations, stock } = req.body;
+            console.log(othersInformations.map(infos => infos.frequency).toString());
     
-            // Vérifiez si toutes les propriétés nécessaires sont présentes
-            if (!name || !description || !prix || !categorie || !stock) {
-                return res.status(400).json({ message: 'Missing required fields' });
-            }
-    
+            // // Vérifiez si toutes les propriétés nécessaires sont présentes
+            // if (!name || !description || !prix || !categorie || !stock) {
+            //     return res.status(400).json({ message: 'Missing required fields' });
+            // }
+           
             const newProduct = await Product.create({
                 name,
                 description,
                 prix,
-                categorie,
-                othersInformations,
+                
+                        categorie: othersInformations.map(infos => infos.categorie).toString(),
+                        frequency: othersInformations.map(infos => infos.frequency).toString(),
+                        weight: othersInformations.map(infos => infos.weight).toString(),
+                        antennaType: othersInformations.map(infos => infos.antennaType).toString(),
+                        depth: othersInformations.map(infos => infos.depth).toString(),
+                        compatibleDrones:othersInformations.map(infos => infos.compatibleDrones).toString(),
+                        fittingsEquipment: othersInformations.map(infos => infos.fittingEquipment).toString(),
                 stock
             });
     
@@ -82,6 +82,7 @@ const productController = {
             res.status(500).json({ error: 'Failed to create product' });
         }
     },
+    
     
     
     
@@ -102,7 +103,15 @@ const productController = {
                 description,
                 prix,
                 categorie,
-                othersInformations,
+                othersInformations: {
+                    categorie: othersInformations && othersInformations.categorie,
+                    frequency: othersInformations && othersInformations.frequency,
+                    weight: othersInformations && othersInformations.weight,
+                    antennaType: othersInformations && othersInformations.antennaType,
+                    depth: othersInformations && othersInformations.depth,
+                    compatibleDrones: othersInformations && othersInformations.compatibleDrones,
+                    fittingsEquipment: othersInformations && othersInformations.fittingsEquipment,
+                },
                 stock
             });
 

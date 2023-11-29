@@ -24,15 +24,15 @@ const AntennesInfo = (props) => {
       {antenne && (
                 <>
                     <p>Nom: {antenne.name}</p>
-                    <p><strong>Fréquence:</strong> {antenne.frequence}</p>
+                    <p><strong>Fréquence:</strong> {antenne.frequency}</p>
                     <p><strong>Description:</strong> {antenne.description}</p>
-                    <p><strong>Type d'antenne:</strong> {antenne.typeAntenne}</p> 
+                    <p><strong>Type d'antenne:</strong> {antenne.antennaType}</p> 
                     <p><strong>Compatible avec drones:</strong> {antenne.compatibleDrones}</p>
                     <p><strong>Catégorie:</strong> {antenne.categorie}</p>
-                    <p><strong>Poids:</strong> {antenne.poids} g</p>
-                    <p><strong>Profondeur:</strong> {antenne.profondeur} cm</p>
-                    <p><strong>Équipement raccords:</strong> {antenne.equipementRaccords}</p>
-                    <p><strong>Prix:</strong> {antenne.price}</p>
+                    <p><strong>Poids:</strong> {antenne.weight} g</p>
+                    <p><strong>Profondeur:</strong> {antenne.depth} cm</p>
+                    <p><strong>Équipement raccords:</strong> {antenne.fittingsEquipment}</p>
+                    <p><strong>Prix:</strong> {antenne.prix}</p>
                     <p><strong>Stock disponible:</strong> {antenne.stock}</p>
                 </>
             )}

@@ -1,6 +1,5 @@
 // Importation
 const { Sequelize, DataTypes } = require('sequelize');
-const Panier = require('./panier.model');
 
 /**
  * Fonction pour créer un model Product (donc table de db)
@@ -32,16 +31,6 @@ const createProduct = (sequelize) => {
             allowNull: false,
         },
 
-        othersInformations: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-
-        categorie: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
-
         frequency:{
             type: DataTypes.STRING,
             allowNull: true,
@@ -50,25 +39,25 @@ const createProduct = (sequelize) => {
         weight:{
             type: DataTypes.STRING,
             allowNull: true,
-
+        },
+        compatibleDrones: {
+            type: DataTypes.STRING,
+            allowNull: true,
         },
 
         antennaType:{
             type: DataTypes.STRING,
             allowNull: true,
-
         },
 
         depth:{
             type: DataTypes.STRING,
             allowNull: true,
-
         },
 
         fittingsEquipment:{
             type: DataTypes.STRING,
             allowNull: true,
-
         },
 
         stock: {
