@@ -67,7 +67,7 @@ const productController = {
                         antennaType: othersInformations.map(infos => infos.antennaType).toString(),
                         depth: othersInformations.map(infos => infos.depth).toString(),
                         compatibleDrones:othersInformations.map(infos => infos.compatibleDrones).toString(),
-                        fittingsEquipment: othersInformations.map(infos => infos.fittingEquipment).toString(),
+                        fittingsEquipment: othersInformations.map(infos => infos.fittingsEquipment).toString(),
                 stock
             });
     
@@ -104,7 +104,7 @@ const productController = {
                         antennaType: othersInformations.map(infos => infos.antennaType).toString(),
                         depth: othersInformations.map(infos => infos.depth).toString(),
                         compatibleDrones:othersInformations.map(infos => infos.compatibleDrones).toString(),
-                        fittingsEquipment: othersInformations.map(infos => infos.fittingEquipment).toString(),
+                        fittingsEquipment: othersInformations.map(infos => infos.fittingsEquipment).toString(),
                 stock
                 },
             );
