@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Rating } from 'react-simple-star-rating';
 import { Link } from 'react-router-dom';
-// import './add.scss';
+import './add.scss';
 
 
 
@@ -38,11 +38,12 @@ console.log(rating);
   return (
     <article className="formulaire">
       <form onSubmit={handleSubmit}>
-        
+      <div className='text'>
         <Link to="/Comment">
           ⬅ Retour
         </Link>
-        <div>
+        
+          <div>
           <label htmlFor="nom">Nom</label>
           <input type="text" name="nom" id="nom" value={nom} onChange={(e) => setNom(e.target.value)} required />
         </div>
@@ -69,6 +70,7 @@ console.log(rating);
         </div>
         <div>
           <button type="submit">Envoyer</button>
+        </div>
         </div>
       </form>
     </article>

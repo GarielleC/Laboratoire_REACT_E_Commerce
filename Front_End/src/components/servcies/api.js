@@ -5,9 +5,9 @@ import axios from 'axios';
 // Fonction pour récupérer tous les conseils
 export const getAllAdvices = async () => {
   try {
-    const existingAdvices = await axios.get('http://localhost:8080/api/advices/get');
-    console.log(existingAdvices);
-    return existingAdvices.data;
+    const getAllAdvices = await axios.get('http://localhost:8080/api/advices/get');
+    console.log(getAllAdvices);
+    return getAllAdvices.data;
   } catch (error) {
     console.error('Error fetching advice details:', error);
     return [];
