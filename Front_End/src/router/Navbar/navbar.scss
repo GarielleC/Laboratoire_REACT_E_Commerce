@@ -1,24 +1,7 @@
 /* Style général pour les liens */
 a {
   text-decoration: none;
-  color: #007bff;
-}
-
-/* Réinitialisation des marges, des paddings et de la boîte de modèle */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Style du corps de la page */
-body {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.146), rgba(255, 255, 255, 0.146)),
-    url(../src/Images/Drone3.jpg);
-  background-position: center;
-  background-size: cover;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 1px;
+  color: #ffffff;
 }
 
 /* Style pour les titres h1 */
@@ -26,11 +9,6 @@ h1 {
   text-align: center;
   color: #fff;
   padding-top: 20px;
-}
-
-/* Style pour les listes non ordonnées */
-ul {
-  list-style: none;
 }
 
 /* Style pour la barre de navigation */
@@ -42,118 +20,6 @@ ul {
   border-radius: 4px;
 }
 
-/* Style pour la section principale */
-.main {
-  display: flex;
-  justify-content: center;
-}
-
-/* Style pour les liens dans la section principale */
-.main > li {
-  margin: 0 2%;
-}
-
-.main a {
-  border-left: 1px solid rgba(23, 23, 50, 1);
-  text-decoration: none;
-  color: #ffe;
-  text-transform: capitalize;
-  font-family: monospace;
-  display: block;
-  padding: 10px 15px;
-  font-size: 16px;
-  transition: background-color 0.5s ease-in-out;
-  font-family: "Raleway", sans-serif;
-
-  &:hover {
-    background-color: white;
-  }
-}
-
-/* Style pour l'effet de menu déroulant au survol */
-.main__el:hover {
-  .drop {
-    display: inherit;
-  }
-
-  /* Animation pour le premier menu */
-  .menu1 li {
-    $animation-delay: 0.3s;
-    
-    @for $i from 1 through 9 {
-      &:nth-of-type(#{$i}) {
-        animation: menu1 0.3s ease-in-out forwards;
-        animation-delay: $animation-delay + 0.3s * ($i - 1);
-      }
-    }
-    
-    &:last-of-type {
-      animation-delay: 3s;
-    }
-  }
-
-  /* Animation pour le deuxième menu */
-  .menu2 li {
-    $animation-delay: 0.3s;
-    
-    @for $i from 1 through 9 {
-      &:nth-of-type(#{$i}) {
-        animation: menu2 0.3s ease-in-out forwards;
-        animation-delay: $animation-delay + 0.3s * ($i - 1);
-      }
-    }
-    
-    &:last-of-type {
-      animation-delay: 3s;
-    }
-  }
-}
-
-/* Style pour le menu déroulant */
-.drop {
-  display: none;
-
-  li {
-    opacity: 0;
-    transform-origin: top center;
-
-    a {
-      background-color: rgba(23, 23, 50, 0.7);
-      padding: 10px 0;
-    }
-  }
-}
-
-/* Animation pour le premier menu déroulant */
-@keyframes menu1 {
-  from {
-    opacity: 0;
-    transform: translateX(30px) rotateY(90deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) rotateY(0);
-  }
-}
-
-/* Animation pour le deuxième menu déroulant */
-@keyframes menu2 {
-  0% {
-    opacity: 0;
-    transform: scale(0.7);
-  }
-
-  50% {
-    opacity: 0.5;
-    transform: scale(1.1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
 
 /* Style pour le bouton de connexion */
 .login-button {
@@ -187,10 +53,9 @@ ul {
 
 /* Style pour le logo */
 .logo {
-  width:70px;          /* Définit la largeur du conteneur .logo */
+  width: 70px;          /* Définit la largeur du conteneur .logo */
   height: 70px;         /* Définit la hauteur du conteneur .logo */
   border-radius: 50%;   /* Transforme le conteneur en une forme de cercle */
-  // overflow: hidden;     /* Cache tout ce qui dépasse du conteneur, nécessaire pour la forme de cercle */
   box-shadow: 0 0 5px rgba(35, 35, 35, 0.5);  /* Ajoute une ombre au conteneur .logo */
 }
 
@@ -202,6 +67,7 @@ img {
   background-color: rgb(255, 255, 255);  /* Couleur de fond de l'image pour remplir le cercle */
   object-fit: cover;    /* Ajuste l'image pour remplir le conteneur sans déformation */
 }
+
 
 
 
