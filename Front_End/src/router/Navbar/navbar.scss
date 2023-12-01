@@ -269,13 +269,13 @@ ul {
 .logo {
   width: 60px;  // Définissez la largeur souhaitée
   height: 60px; // Définissez la hauteur souhaitée
-  border-radius: 50%; // Transforme l'image en cercle
   overflow: hidden; // Cache le contenu qui dépasse du cercle
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); // Ajoutez une ombre au cercle
 
   img {
     width: 110%; // Remplit le cercle avec l'image
     height: 110%;
+    border-radius: 50%; // Transforme l'image en cercle
     background-color: rgb(255, 255, 255);
     object-fit: cover; // Ajuste l'image pour remplir le cercle sans déformation
   }

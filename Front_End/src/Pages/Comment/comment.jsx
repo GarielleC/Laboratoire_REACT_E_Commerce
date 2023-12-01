@@ -1,6 +1,7 @@
 import React from 'react';
 import { Rating } from 'react-simple-star-rating';
 import { Link } from 'react-router-dom';
+import { getAllAdvices } from '../../components/servcies/api';
 
 
 function CommentList({ commentaires }) {
