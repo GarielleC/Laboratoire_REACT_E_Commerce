@@ -3,7 +3,7 @@ import App from '../App.jsx';
 import Home from '../Pages/Home/Home.jsx';
 import About from '../Pages/About/About.jsx';
 import Antennes from '../Pages/Drones/Antennes.jsx';
-import Batteries_FPV from '../Pages/Drones/Batteries_FPV.jsx';
+// import Batteries_FPV from '../Pages/Drones/Batteries_FPV.jsx';
 import Cameras_FPV from '../Pages/Drones/Cameras_FPV.jsx';
 import Chassis_FPV from '../Pages/Drones/Chassis_FPV.jsx';
 import ESC_FPV from '../Pages/Drones/ESC_FPV.jsx';
@@ -25,7 +25,7 @@ import Transmissions from '../Pages/Remote_Controlled/Transmissions.jsx';
 import LoadingPage from '../../src/Pages/LoadingPage/Loading.jsx';
 import AddComment from '../Pages/AddComment/add.jsx';
 import CommentList from '../Pages/Comment/comment.jsx';
-import Panier from '../components/Panier/panier.jsx';
+// import Panier from '../components/Panier/panier.jsx';
 import AntennesInfo from '../components/DronesInfos/AntennesInfo.jsx';
 
 const router = createBrowserRouter([
@@ -49,10 +49,10 @@ const router = createBrowserRouter([
                 path: "drones/antennes/details/:id",
                 element: <AntennesInfo />,
             },
-            {
-                path: "batteries-fpv",
-                element: <Batteries_FPV />,
-            },
+            // {
+            //     path: "batteries-fpv",
+            //     element: <Batteries_FPV />,
+            // },
             {
                 path: "camera-fpv",
                 element: <Cameras_FPV />,
@@ -137,10 +137,10 @@ const router = createBrowserRouter([
                 path: "comment",
                 element: <CommentList />,
             },
-            {
-                path: "panier",
-                element: <Panier />,
-            },
+            // {
+            //     path: "panier",
+            //     element: <Panier />,
+            // },
         ],
     },
 ]);

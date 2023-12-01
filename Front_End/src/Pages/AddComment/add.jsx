@@ -38,6 +38,7 @@ console.log(rating);
   return (
     <article className="formulaire">
       <form onSubmit={handleSubmit}>
+        
         <Link to="/Comment">
           ⬅ Retour
         </Link>

@@ -24,7 +24,7 @@ const BasicMenu = () => {
   };
 
   return (
-    <div>
+    <div className="navbar">
       <Button className="logo">
         <img src={Logo} alt="Logo" />
       </Button>
@@ -100,7 +100,7 @@ const BasicMenu = () => {
       </Menu>
 
       <Button>
-        <Link to='/Comment'>Votre Commentaire</Link>
+        <Link to='/AddComment'>Votre Commentaire</Link>
       </Button>
       
       <Button className='login-button'>

@@ -35,6 +35,9 @@ const productDetailssInfo = () => {
       {productDetails && (
         
         <>
+        <a href='/drones/antennes'>
+          <button>Retour</button>
+        </a>
         <h3>{productDetails.name}</h3>
                     {/* <p>Nom: {productDetails.name}</p> */}
                     <p><strong>Fréquence:</strong> {productDetails.frequency}</p>

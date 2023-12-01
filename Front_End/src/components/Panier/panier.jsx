@@ -1,17 +1,26 @@
-import PropTypes from 'prop-types';
+// // PanierContext.jsx
+// import React, { createContext } from 'react';
 
-const Panier = (props) => {
-    const { productAjout, completed, deleted } = props;
+// export const PanierContext = createContext({
+//   items: [],
+//   addItemToCart: () => {} ,
+// });
 
-    return (
-        <h2>Panier</h2>
-    );
-};
+// export const PanierContextProvider = ({ children }) => {
 
-Panier.propTypes = {
-    productAjout: PropTypes.array,
-    completed: PropTypes.func,
-    deleted: PropTypes.func
-};
+//     //Fonction d'ajout dans le panier
+// const handleAddToProductCart = (productID) => {
+//     console.log(productID);
+// }
 
-export default Panier;
+//   const initialValue = {
+//     items: [],
+//         addItemToCart: handleAddToProductCart ,
+//   };
+
+//   return (
+//     <PanierContext.Provider value={initialValue}>
+//       {children}
+//     </PanierContext.Provider>
+//   );
+// };
