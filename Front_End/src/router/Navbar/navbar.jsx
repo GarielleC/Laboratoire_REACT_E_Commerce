@@ -104,7 +104,7 @@ const BasicMenu = () => {
       </Button>
       
       <Button className='login-button'>
-        <Link to='/Login'>Login</Link>
+        <Link to='/login'>Login</Link>
       </Button>
       
       <Button>

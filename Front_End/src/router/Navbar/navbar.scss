@@ -1,253 +1,39 @@
-/* Style général pour les liens */
-a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-/* Style pour les titres h1 */
-h1 {
-  text-align: center;
-  color: #fff;
-  padding-top: 20px;
-}
-
-/* Style pour la barre de navigation */
-.navbar {
-  height: 60px;
-  margin: 60px auto;
-  background-color: rgb(23, 23, 50);
-  text-align: center;
-  border-radius: 4px;
-}
-
-
-/* Style pour le bouton de connexion */
-.login-button {
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  padding: 0;
-  position: relative;
-  z-index: 999;
-}
-
-/* Style pour l'icône du bouton de connexion */
-.login-button::before {
-  font-family: "Font Awesome 5 Free";
-  font-size: 24px;
-  display: block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  background-color: #007bff;
-  border: 2px solid #fff;
-}
-
-/* Effet au survol du bouton de connexion */
-.login-button:hover {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-/* Style pour le logo */
-.logo {
-  width: 70px;          /* Définit la largeur du conteneur .logo */
-  height: 70px;         /* Définit la hauteur du conteneur .logo */
-  border-radius: 50%;   /* Transforme le conteneur en une forme de cercle */
-  box-shadow: 0 0 5px rgba(35, 35, 35, 0.5);  /* Ajoute une ombre au conteneur .logo */
-}
-
-/* Style pour l'image à l'intérieur du logo */
-img {
-  width: 80%;          /* Définit la largeur de l'image à l'intérieur de .logo */
-  height: 80%;         /* Définit la hauteur de l'image à l'intérieur de .logo */
-  border-radius: 2rem;   /* Assure que l'image à l'intérieur suit la forme de cercle */
-  background-color: rgb(255, 255, 255);  /* Couleur de fond de l'image pour remplir le cercle */
-  object-fit: cover;    /* Ajuste l'image pour remplir le conteneur sans déformation */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// /* Style général pour les liens */
 // a {
 //   text-decoration: none;
-//   color: #007bff;
+//   color: #ffffff;
 // }
 
-
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
-
-// $font-family: "Raleway", sans-serif;
-// $image-path: linear-gradient(rgba(255, 255, 255, 0.146), rgba(255, 255, 255, 0.146)),
-// url(../src/Images/Drone3.jpg);
-// $background-color-navbar: rgb(23, 23, 50);
-// // $image-path: url(../src/Images/Drone2.jpg);
-
-
-
-
-
-// body {
-//   background-image: $image-path; 
-// background-position: center;
-//    background-size: cover;
-//   font-family: $font-family;
-//   letter-spacing: 1px;
-  
-// }
-
+// /* Style pour les titres h1 */
 // h1 {
 //   text-align: center;
 //   color: #fff;
 //   padding-top: 20px;
 // }
 
-// ul {
-//   list-style: none;
-// }
-
-// .navbar  {
+// /* Style pour la barre de navigation */
+// .navbar {
 //   height: 60px;
 //   margin: 60px auto;
-//   background-color: $background-color-navbar;
+//   background-color: rgb(23, 23, 50);
 //   text-align: center;
 //   border-radius: 4px;
 // }
 
-// .main {
-//   display: flex;
-//   justify-content: center;
 
-//   > li {
-//     margin: 0 2%;
-
-//     a {
-//       border-left: 1px solid rgba(23, 23, 50, 1);
-//       text-decoration: none;
-//       color: #ffe;
-//       text-transform: capitalize;
-//       font-family: monospace;
-//       display: block;
-//       padding: 10px 15px;
-//       font-size: 16px;
-//       transition: background-color 0.5s ease-in-out;
-//       font-family: $font-family;
-
-//       &:hover {
-//         background-color: white;
-//       }
-//     }
-//   }
-
-//   .main__el:hover {
-//     .drop {
-//       display: inherit;
-//     }
-
-//     .menu1 li {
-//       $animation-delay: 0.3s;
-
-//            @for $i from 1 through 9 {
-//         &:nth-of-type(#{$i}) {
-//           animation: menu1 0.3s ease-in-out forwards;
-//           animation-delay: $animation-delay + 0.3s * ($i - 1);
-//         }
-//       }
-      
-//       &:last-of-type {
-//         animation-delay: 3s;
-//       }
-//     }
-//     .menu2 li {
-//       $animation-delay: 0.3s;
-
-//            @for $i from 1 through 9 {
-//         &:nth-of-type(#{$i}) {
-//           animation: menu2 0.3s ease-in-out forwards;
-//           animation-delay: $animation-delay + 0.3s * ($i - 1);
-//         }
-//       }
-      
-//       &:last-of-type {
-//         animation-delay: 3s;
-//       }
-//     }
-//   }
-// }
-
-// .drop {
-//   display: none;
-
-//   li {
-//     opacity: 0;
-//     transform-origin: top center;
-
-//     a {
-//       background-color: rgba(23, 23, 50, 0.7);
-//       padding: 10px 0;
-//     }
-//   }
-// }
-
-// @keyframes menu1 {
-//   from {
-//     opacity: 0;
-//     transform: translateX(30px) rotateY(90deg);
-//   }
-
-//   to {
-//     opacity: 1;
-//     transform: translateX(0) rotateY(0);
-//   }
-// }
-
-// @keyframes menu2 {
-//   0% {
-//     opacity: 0;
-//     transform: scale(0.7);
-//   }
-
-//   50% {
-//     opacity: 0.5;
-//     transform: scale(1.1);
-//   }
-
-//   100% {
-//     opacity: 1;
-//     transform: scale(1);
-//   }
-// }
-
+// /* Style pour le bouton de connexion */
 // .login-button {
 //   background-color: transparent;
 //   color: #fff;
 //   border: none;
 //   padding: 0;
-//   position: relative; 
-//   z-index: 999; /* Apparition du bouton au-dessus du contenu. */
+//   position: relative;
+//   z-index: 999;
 // }
 
+// /* Style pour l'icône du bouton de connexion */
 // .login-button::before {
-//   font-family: "Font Awesome 5 Free"; /* Police FontAwesome. */
+//   font-family: "Font Awesome 5 Free";
 //   font-size: 24px;
 //   display: block;
 //   width: 40px;
@@ -255,30 +41,244 @@ img {
 //   line-height: 40px;
 //   text-align: center;
 //   border-radius: 50%;
-//   background-color: #007bff; /* Couleur du cercle */
-//   border: 2px solid #fff; /* Bordure du cercle */
+//   background-color: #007bff;
+//   border: 2px solid #fff;
 // }
 
+// /* Effet au survol du bouton de connexion */
 // .login-button:hover {
-//   /* Ajoute des effets au survol. */
 //   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 //   transition: box-shadow 0.3s ease-in-out;
 // }
 
-
+// /* Style pour le logo */
 // .logo {
-//   width: 60px;  // Définissez la largeur souhaitée
-//   height: 60px; // Définissez la hauteur souhaitée
-//   border-radius: 50%; // Transforme l'image en cercle
-//   overflow: hidden; // Cache le contenu qui dépasse du cercle
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); // Ajoutez une ombre au cercle
-
-//   img {
-//     width: 110%; // Remplit le cercle avec l'image
-//     height: 110%;
-//     background-color: rgb(255, 255, 255);
-//     object-fit: cover; // Ajuste l'image pour remplir le cercle sans déformation
-//   }
+//   width: 70px;          /* Définit la largeur du conteneur .logo */
+//   height: 70px;         /* Définit la hauteur du conteneur .logo */
+//   border-radius: 50%;   /* Transforme le conteneur en une forme de cercle */
+//   box-shadow: 0 0 5px rgba(35, 35, 35, 0.5);  /* Ajoute une ombre au conteneur .logo */
 // }
+
+// /* Style pour l'image à l'intérieur du logo */
+// img {
+//   width: 80%;          /* Définit la largeur de l'image à l'intérieur de .logo */
+//   height: 80%;         /* Définit la hauteur de l'image à l'intérieur de .logo */
+//   border-radius: 2rem;   /* Assure que l'image à l'intérieur suit la forme de cercle */
+//   background-color: rgb(255, 255, 255);  /* Couleur de fond de l'image pour remplir le cercle */
+//   object-fit: cover;    /* Ajuste l'image pour remplir le conteneur sans déformation */
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$font-family: "Raleway", sans-serif;
+$image-path: linear-gradient(rgba(255, 255, 255, 0.146), rgba(255, 255, 255, 0.146)),
+url(../src/Images/Drone3.jpg);
+$background-color-navbar: rgb(23, 23, 50);
+// $image-path: url(../src/Images/Drone2.jpg);
+
+
+
+
+
+body {
+  background-image: $image-path; 
+background-position: center;
+   background-size: cover;
+  font-family: $font-family;
+  letter-spacing: 1px;
+  
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  padding-top: 20px;
+}
+
+ul {
+  list-style: none;
+}
+
+.navbar  {
+  height: 60px;
+  margin: 60px auto;
+  background-color: $background-color-navbar;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+
+  > li {
+    margin: 0 2%;
+
+    a {
+      border-left: 1px solid rgba(23, 23, 50, 1);
+      text-decoration: none;
+      color: #ffe;
+      text-transform: capitalize;
+      font-family: monospace;
+      display: block;
+      padding: 10px 15px;
+      font-size: 16px;
+      transition: background-color 0.5s ease-in-out;
+      font-family: $font-family;
+
+      &:hover {
+        background-color: white;
+      }
+    }
+  }
+
+  .main__el:hover {
+    .drop {
+      display: inherit;
+    }
+
+    .menu1 li {
+      $animation-delay: 0.3s;
+
+           @for $i from 1 through 9 {
+        &:nth-of-type(#{$i}) {
+          animation: menu1 0.3s ease-in-out forwards;
+          animation-delay: $animation-delay + 0.3s * ($i - 1);
+        }
+      }
+      
+      &:last-of-type {
+        animation-delay: 3s;
+      }
+    }
+    .menu2 li {
+      $animation-delay: 0.3s;
+
+           @for $i from 1 through 9 {
+        &:nth-of-type(#{$i}) {
+          animation: menu2 0.3s ease-in-out forwards;
+          animation-delay: $animation-delay + 0.3s * ($i - 1);
+        }
+      }
+      
+      &:last-of-type {
+        animation-delay: 3s;
+      }
+    }
+  }
+}
+
+.drop {
+  display: none;
+
+  li {
+    opacity: 0;
+    transform-origin: top center;
+
+    a {
+      background-color: rgba(23, 23, 50, 0.7);
+      padding: 10px 0;
+    }
+  }
+}
+
+@keyframes menu1 {
+  from {
+    opacity: 0;
+    transform: translateX(30px) rotateY(90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) rotateY(0);
+  }
+}
+
+@keyframes menu2 {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login-button {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  padding: 0;
+  position: relative; 
+  z-index: 999; /* Apparition du bouton au-dessus du contenu. */
+}
+
+.login-button::before {
+  font-family: "Font Awesome 5 Free"; /* Police FontAwesome. */
+  font-size: 24px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #007bff; /* Couleur du cercle */
+  border: 2px solid #fff; /* Bordure du cercle */
+}
+
+.login-button:hover {
+  /* Ajoute des effets au survol. */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.logo {
+  width: 60px;  // Définissez la largeur souhaitée
+  height: 60px; // Définissez la hauteur souhaitée
+  border-radius: 50%; // Transforme l'image en cercle
+  overflow: hidden; // Cache le contenu qui dépasse du cercle
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); // Ajoutez une ombre au cercle
+
+  img {
+    width: 110%; // Remplit le cercle avec l'image
+    height: 110%;
+    background-color: rgb(255, 255, 255);
+    object-fit: cover; // Ajuste l'image pour remplir le cercle sans déformation
+  }
+}
   
  

@@ -27,6 +27,7 @@ import AddComment from '../Pages/AddComment/add.jsx';
 import CommentList from '../Pages/Comment/comment.jsx';
 // import Panier from '../components/Panier/panier.jsx';
 import AntennesInfo from '../components/DronesInfos/AntennesInfo.jsx';
+import Login from '../components/Compte/Login/Login.jsx';
 
 const router = createBrowserRouter([
     {
@@ -128,6 +129,10 @@ const router = createBrowserRouter([
             {
                 path: "loadingPage",
                 element: <LoadingPage />,
+            },
+            {
+                path: "login",
+                element: <Login />,
             },
             {
                 path: "addComment",
