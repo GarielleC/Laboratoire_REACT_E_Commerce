@@ -1,0 +1,52 @@
+/* Styles de base pour le conteneur */
+.comment {
+    display: flex;
+    flex-direction: column; /* Affiche les éléments en colonne */
+    align-items: center; /* Centre le contenu horizontalement */
+    padding: 20px; /* Espace intérieur du conteneur */
+  }
+  .Retour{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(1, 1, 1, 0.53);
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    padding: 20px ; /* Espace à l'intérieur du formulaire */
+    border: 1px solid rgba(1, 1, 1, 0.53); /* Bordure du formulaire */
+    border-radius: 10px; /* Coins arrondis du formulaire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.469); /* Ombre autour du formulaire */
+    top: 10px; /* Ajustez la valeur en fonction de la hauteur de votre menu */
+    color: white;
+  }
+  .Retour:active {
+    background-color: rgba(219, 219, 219, 0.53)/* Nouvelle couleur ici */;
+    color: black;
+  }
+  
+  /* Ajoutez une classe RetourHovered lorsque .Retour est survolé */
+  .Retour:hover {
+    background-color: rgba(219, 219, 219, 0.53)/* Nouvelle couleur ici */;
+    color: black;
+  }
+  .carre {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgba(1, 1, 1, 0.53);
+    max-width: 1000px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    padding: 20px ; /* Espace à l'intérieur du formulaire */
+    border: 1px solid rgba(1, 1, 1, 0.53); /* Bordure du formulaire */
+    border-radius: 10px; /* Coins arrondis du formulaire */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.469); /* Ombre autour du formulaire */
+    position: relative; /* Permet d'utiliser la position absolue pour placer l'article */
+    top: 50px; /* Ajustez la valeur en fonction de la hauteur de votre menu */
+}
+
+/* Styles pour les éléments du formulaire (labels et champs de saisie) */
+div {
+    margin-bottom: 10px;
+}
+
+li{
+    display: block;
+    color: white;
+    margin-bottom: 50px; /* Ajoute de l'espace en bas de chaque élément li */
+}

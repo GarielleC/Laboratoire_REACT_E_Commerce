@@ -9,6 +9,9 @@ function App() {
       <div className="App">
         <Navbar /> 
         <Outlet />
+        <footer>
+          <p>&copy; 2023 Rc Land</p>
+        </footer>
       </div>
     </main>
   );

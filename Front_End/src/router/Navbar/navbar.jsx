@@ -110,6 +110,11 @@ const BasicMenu = () => {
       <Button>
         <Link to='/Panier'>Panier</Link>
       </Button>
+
+      <Button>
+        <Link to='/favoris'>🤍</Link>
+      </Button>
+
     </div>
   );
 }

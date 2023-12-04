@@ -28,6 +28,7 @@ import CommentList from '../Pages/Comment/comment.jsx';
 // import Panier from '../components/Panier/panier.jsx';
 import AntennesInfo from '../components/DronesInfos/AntennesInfo.jsx';
 import Login from '../components/Compte/Login/Login.jsx';
+// import Favoris from '../components/Favoris/favoris_list.jsx';
 
 const router = createBrowserRouter([
     {
@@ -146,6 +147,11 @@ const router = createBrowserRouter([
             //     path: "panier",
             //     element: <Panier />,
             // },
+            // {
+            //     path: "favoris",
+            //     element: <Favoris />,
+            //   },
+              
         ],
     },
 ]);
