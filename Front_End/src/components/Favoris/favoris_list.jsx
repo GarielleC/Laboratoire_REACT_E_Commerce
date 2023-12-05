@@ -1,52 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getAllFavoris } from '../servcies/api';
 
-const Product = ({ id, name, onToggleFavorite }) => {
+
+// Composant Product : représente un produit avec ses détails et un bouton pour ajouter/retirer des favoris
+const Product = ({ id, name, prix, quantité, onToggleFavoris }) => {
   return (
     <div>
       <p>{name}</p>
-      <button onClick={() => onToggleFavorite(id)}>
-        {onToggleFavorite && onToggleFavorite.includes(id) ? '❤️' : '🤍'}
+      <p>{`Prix: ${prix}€`}</p>
+      <p>{`Quantité: ${quantité}`}</p>
+      <button onClick={() => onToggleFavoris(id)}>
+        {onToggleFavoris && onToggleFavoris.includes(id) ? '❤️' : '🤍'}
       </button>
     </div>
   );
 };
 
+// Composant principal pour afficher la liste de produits
 const ProductList = () => {
-  const [favorites, setFavorites] = useState([]);
+  // State pour stocker la liste des favoris
+  const [favoris, setFavoris] = useState([]);
 
-  const toggleFavorite = (productId) => {
-    const updatedFavorites = favorites.includes(productId)
-      ? favorites.filter((id) => id !== productId)
-      : [...favorites, productId];
-    setFavorites(updatedFavorites);
+  // State pour gérer les erreurs lors de la récupération des favoris
+  const [error, setError] = useState(null);
+
+  // Fonction pour ajouter ou supprimer un produit des favoris
+  const toggleFavoris = (productId) => {
+    const updatedFavoris = favoris.includes(productId)
+      ? favoris.filter((id) => id !== productId)
+      : [...favoris, productId];
+    setFavoris(updatedFavoris);
   };
 
-  const products = [
-    { id: 1, name: 'Product 1' },
-    { id: 2, name: 'Product 2' },
-    { id: 3, name: 'Product 3' },
-  ];
+  // Effet secondaire pour récupérer la liste des favoris lors du montage du composant
+  useEffect(() => {
+    const fetchFavoris = async () => {
+      try {
+        // Appel à la fonction getAllFavoris de l'API
+        const res = await getAllFavoris();
+        console.log(res);
+        // Mise à jour du state avec la liste des favoris récupérée
+        setFavoris(res);
+      } catch (err) {
+        // Gestion des erreurs lors de la récupération des favoris
+        console.error('Error fetching favoris details:', err);
+        setError(err.response ? err.response.data : 'An unexpected error occurred.');
+      }
+    };
+
+    // Appel de la fonction pour récupérer les favoris lors du montage du composant
+    fetchFavoris();
+  }, []);// Le tableau vide indique que cet effet ne dépend d'aucune dépendance, donc il s'exécute une seule fois
 
   return (
     <div>
-      <h1>Product List</h1>
-      {products.map((product) => (
-        <Product
-          key={product.id}
-          id={product.id}
-          name={product.name}
-          onToggleFavorite={favorites}
-        />
-      ))}
+      <h1>Favoris List</h1>
+      {error ? (<p> Error fetching favoris details : {error}</p>
+      ) : (favoris.length > 0 ? (
+        favoris.map((favori) => (
+          <Product
+            key={favori.id}
+            id={favori.id}
+            name={favori.name}
+            prix={favori.name}
+            quantité={favori.stock}
+            onToggleFavoris={favoris}
+          />
+        ))) : <p> No favoris </p>)}
       <h2>Favorites</h2>
-      {favorites.length > 0 ? (
+      {favoris.length > 0 ? (
         <ul>
-          {favorites.map((id) => (
-            <li key={id}>{`Product ${id} ❤️`}</li>
+          {favoris.map((favori) => (
+            <li key={favori.id}>{`Product ${favori.id} ❤️`}</li>
           ))}
         </ul>
       ) : (
-        <p>No favorites yet.</p>
+        <p>You have no favorites</p>
       )}
     </div>
   );

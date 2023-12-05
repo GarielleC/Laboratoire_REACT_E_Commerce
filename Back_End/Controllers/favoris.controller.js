@@ -5,7 +5,7 @@ const favorisService = require('../services/favoris.service')
 const favorisController = {
     // Renvoie tous les produits (liste complète)
     getAllProduct: (req, res) => {
-        res.json(product);
+        res.json(Product);
     },
 
     addProduct: async (req, res) => {
@@ -25,13 +25,13 @@ const favorisController = {
         const id = Number(req.params.productID);
         
   
-        const index = product.findIndex(product => product.id === id);
+        const index = Product.findIndex(Product => Product.id === id);
 
         if (index === -1) {
             return res.status(404).send('Product not found');
         }
         
-        product.splice(index, 1);
+        Product.splice(index, 1);
         res.status(200).json('Product deleted');
     },
 };
