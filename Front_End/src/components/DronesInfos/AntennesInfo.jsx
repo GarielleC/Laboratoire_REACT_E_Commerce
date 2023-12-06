@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react';
 import { GetDetails } from '../servcies/api';
 import { useParams } from 'react-router-dom';
 import FavorisList from '../Favoris/favoris_list';
+import './AntennesInfos.scss'
 
 const productDetailssInfo = () => {
 
@@ -10,6 +11,7 @@ const productDetailssInfo = () => {
 
   // État pour stocker les détails du produit
     const [ productDetails, setProductDetails] = useState({});
+    const [isFavori, setIsFavori] = useState(false);
     
     
 
@@ -20,7 +22,9 @@ const productDetailssInfo = () => {
        // Afficher la réponse dans la console (à des fins de débogage)
       console.log(response);
       if (response) {
-          setProductDetails(response)
+          setProductDetails(response);
+          // Vérifier si le produit est dans les favoris
+      setIsFavori(localStorage.getItem(response.id) === 'true');
       }
   }
  // Afficher les détails du produit dans la console (à des fins de débogage)
@@ -31,6 +35,13 @@ const productDetailssInfo = () => {
     id ? getProduct(id) : null;
   }, [])
 
+  const addToFavoris = () => {
+    // Mettre à jour l'état local des favoris
+    setIsFavori(!isFavori);
+      // Mettre à jour les favoris dans le stockage local
+      localStorage.setItem(productDetails.id, (!isFavori).toString());
+    };
+
     // Rendu du composant
   return (
     <div>
@@ -39,7 +50,7 @@ const productDetailssInfo = () => {
         
         <>
         <a href='/drones/antennes'>
-          <button>Retour</button>
+          <button className='retour'>Retour</button>
         </a>
         <h3>{productDetails.name}</h3>
                     {/* <p>Nom: {productDetails.name}</p> */}
@@ -53,6 +64,12 @@ const productDetailssInfo = () => {
                     <p><strong>Équipement raccords:</strong> {productDetails.fittingsEquipment}</p>
                     <p><strong>Prix:</strong> {productDetails.prix} €</p>
                     <p><strong>Stock disponible:</strong> {productDetails.stock}</p>
+                    {/* Bouton d'ajout aux favoris */}
+                    <div className='favoris'>
+                      <button onClick={addToFavoris}>
+                        {isFavori ? '❤️' : '🤍'}
+                      </button>
+                    </div>
                 </>
             )}
     </div>

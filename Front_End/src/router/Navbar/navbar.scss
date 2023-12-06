@@ -97,8 +97,8 @@ a {
 }
 
 $font-family: "Raleway", sans-serif;
-$image-path: linear-gradient(rgba(255, 255, 255, 0.146), rgba(255, 255, 255, 0.146)),
-url(../src/Images/Drone3.jpg);
+// $image-path: linear-gradient(rgba(255, 255, 255, 0.146), rgba(255, 255, 255, 0.146)),
+// url(../src/Images/Drone3.jpg);
 $background-color-navbar: rgb(23, 23, 50);
 // $image-path: url(../src/Images/Drone2.jpg);
 
@@ -107,9 +107,9 @@ $background-color-navbar: rgb(23, 23, 50);
 
 
 body {
-  background-image: $image-path; 
-background-position: center;
-   background-size: cover;
+// background-image: $image-path; 
+  background-position: center;
+  background-size: cover;
   font-family: $font-family;
   letter-spacing: 1px;
   
