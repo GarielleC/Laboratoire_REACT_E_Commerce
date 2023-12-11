@@ -48,8 +48,8 @@ const Register = (props) => {
         <button type="submit">Enregistrer</button>
       </form>
 
-      {/* Bouton pour indiquer que l'utilisateur est pas encore membre */}
-      <button onClick={() => setIsRegistered(true)}>Pas encore membre ? Connectez-vous ici !</button>
+      {/* Bouton pour indiquer que l'utilisateur est Déjà membre */}
+      <button onClick={() => setIsRegistered(true)}>Déjà membre ? Connectez-vous ici !</button>
     </>
   );
 }
