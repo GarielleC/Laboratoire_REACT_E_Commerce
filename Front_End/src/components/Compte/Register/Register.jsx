@@ -4,8 +4,7 @@ import PropTypes from "prop-types";
 import Input from '../Inputs/inputs.jsx';
 
 const Register = (props) => {
-
-    const { setIsRegistered } = props;
+    const [isRegistered, setIsRegistered] = useState(false);
     console.log(setIsRegistered);
 
     const [inputValue, setInputValue] = useState({
