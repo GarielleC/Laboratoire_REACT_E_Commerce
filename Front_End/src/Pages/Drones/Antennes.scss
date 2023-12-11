@@ -1,0 +1,10 @@
+.tableau{
+    padding: 10px; /* Espacement interne des cellules */
+    margin: 30px;
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    background-color: rgba(0, 0, 0, 0.53);
+    border: 3px solid rgba(0, 0, 0, 0.53); /* Bordure de 3 pixels autour du tableau */
+    border-radius: 1rem;
+    display: flex;
+}

@@ -1,94 +1,7 @@
-// /* Style général pour les liens */
-// a {
-//   text-decoration: none;
-//   color: #ffffff;
-// }
-
-// /* Style pour les titres h1 */
-// h1 {
-//   text-align: center;
-//   color: #fff;
-//   padding-top: 20px;
-// }
-
-// /* Style pour la barre de navigation */
-// .navbar {
-//   height: 60px;
-//   margin: 60px auto;
-//   background-color: rgb(23, 23, 50);
-//   text-align: center;
-//   border-radius: 4px;
-// }
-
-
-// /* Style pour le bouton de connexion */
-// .login-button {
-//   background-color: transparent;
-//   color: #fff;
-//   border: none;
-//   padding: 0;
-//   position: relative;
-//   z-index: 999;
-// }
-
-// /* Style pour l'icône du bouton de connexion */
-// .login-button::before {
-//   font-family: "Font Awesome 5 Free";
-//   font-size: 24px;
-//   display: block;
-//   width: 40px;
-//   height: 40px;
-//   line-height: 40px;
-//   text-align: center;
-//   border-radius: 50%;
-//   background-color: #007bff;
-//   border: 2px solid #fff;
-// }
-
-// /* Effet au survol du bouton de connexion */
-// .login-button:hover {
-//   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-//   transition: box-shadow 0.3s ease-in-out;
-// }
-
-// /* Style pour le logo */
-// .logo {
-//   width: 70px;          /* Définit la largeur du conteneur .logo */
-//   height: 70px;         /* Définit la hauteur du conteneur .logo */
-//   border-radius: 50%;   /* Transforme le conteneur en une forme de cercle */
-//   box-shadow: 0 0 5px rgba(35, 35, 35, 0.5);  /* Ajoute une ombre au conteneur .logo */
-// }
-
-// /* Style pour l'image à l'intérieur du logo */
-// img {
-//   width: 80%;          /* Définit la largeur de l'image à l'intérieur de .logo */
-//   height: 80%;         /* Définit la hauteur de l'image à l'intérieur de .logo */
-//   border-radius: 2rem;   /* Assure que l'image à l'intérieur suit la forme de cercle */
-//   background-color: rgb(255, 255, 255);  /* Couleur de fond de l'image pour remplir le cercle */
-//   object-fit: cover;    /* Ajuste l'image pour remplir le conteneur sans déformation */
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 a {
   text-decoration: none;
-  color: #007bff;
+  color: #ffffff;
 }
-
 
 * {
   margin: 0;
@@ -102,17 +15,12 @@ $font-family: "Raleway", sans-serif;
 $background-color-navbar: rgb(23, 23, 50);
 // $image-path: url(../src/Images/Drone2.jpg);
 
-
-
-
-
 body {
 // background-image: $image-path; 
   background-position: center;
   background-size: cover;
   font-family: $font-family;
-  letter-spacing: 1px;
-  
+  letter-spacing: 1px; 
 }
 
 h1 {
@@ -158,12 +66,12 @@ ul {
     }
   }
 
-  .main__el:hover {
+  .Drones:hover {
     .drop {
       display: inherit;
     }
 
-    .menu1 li {
+    .menu-drones {
       $animation-delay: 0.3s;
 
            @for $i from 1 through 9 {

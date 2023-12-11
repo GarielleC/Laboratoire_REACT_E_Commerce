@@ -1,14 +1,80 @@
-.retour{
+// /* Style pour la classe .retour */
+.retour {
+  padding: 10px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.53);
+  color: white;
+  border: 3px solid rgba(0, 0, 0, 0.53); /* Bordure de 3 pixels autour du tableau */
+    border-radius: 1rem;
+  }
+  
+//   /* Style pour les balises h3 */
+  h3 {
+    padding: 15px;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  /* Style pour la classe .tableau */
+  .tableau {
+    padding: 10px; /* Espacement interne des cellules */
+    margin: 30px;
+    display: flex;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    background-color: rgba(0, 0, 0, 0.53);
+    border: 3px solid rgba(0, 0, 0, 0.53); /* Bordure de 3 pixels autour du tableau */
+    border-radius: 1rem;
+  }
+  
+  
+  /* Style pour les paragraphes à l'intérieur de .tableau */
+  .tableau p {
+    padding: 10px; /* Espacement interne des cellules */
+    margin: 10px;
+    // border-bottom: 1px solid #ddd; /* Bordure entre chaque cellule */
+  }
+  .article{
+    background-color: rgba(0, 0, 0, 0.602);
+    border-radius: 1rem;
+    padding: 10px;
+    margin: 10px;
 
-}
-
-h3{
-
-}
-
-.favoris{
+  }
+  /* Style pour les balises p */
+  p {
+    padding: 5px;
+    margin-bottom: 10px;
+    color: white;
+    // border: 1px solid #ddd; /* Couleur et épaisseur de la bordure */
+  }
+  
+  /* Style pour les paragraphes avec la classe .tab */
+  .tab {
+    background-color:  rgb(35, 35, 76);/* Style pour la couleur de fond avec une transparence */
+    border-collapse: collapse;/* Style pour la propriété de collapse des bordures de tableau */
+    border-spacing: 10px;/* Style pour l'espacement entre les cellules du tableau */
+    color: white;
+    // box-shadow: 0 4px 8px rgba(196, 177, 255, 0.457);
+    
+  }
+  
+  /* Style pour les paragraphes avec la classe .tab2 */
+  .tab2 {
+    background-color: rgba(53, 39, 68, 0.77);/* Style pour la couleur de fond avec une transparence */
+    border-collapse: collapse;/* Style pour la propriété de collapse des bordures de tableau */
+    border-spacing: 10px;/* Style pour l'espacement entre les cellules du tableau */
+    color: white;
+    // box-shadow: 0 4px 8px rgba(225, 177, 255, 0.457);
+    
+  }
+  /* Style pour la classe .favoris */
+  .favoris {
     top: 20px;
     right: 20px;
     padding: 10px;
     cursor: pointer;
-}
+    display: flex;
+    flex-direction: row-reverse;
+    // top: 1rem;
+    // right: 1rem;
+  }

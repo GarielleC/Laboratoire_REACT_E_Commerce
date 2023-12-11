@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { GetAllDrones, GetDetails } from '../../components/servcies/api';
 // Composant pour afficher les informations sur les antennes
 import AntennesInfo from '../../components/DronesInfos/AntennesInfo';
+import './Antennes.scss';
 
 // Composant fonctionnel Antennes
 const Antennes = ({ stock }) => {
@@ -42,7 +43,7 @@ const Antennes = ({ stock }) => {
      // Rend le composant
     return (
 
-        <div>
+        <div className='tableau'>
         {productList.map((product) => (
             <div key={product.id}>
                 <Link to={'details/' + product.id}>
