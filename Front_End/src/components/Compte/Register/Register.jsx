@@ -2,6 +2,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Input from '../Inputs/inputs.jsx';
+import './register.scss';
 
 const Register = (props) => {
   // État pour suivre si l'utilisateur est déjà enregistré
@@ -23,7 +24,8 @@ const Register = (props) => {
   return (
     <>
       {/* Formulaire d'enregistrement */}
-      <form>
+      <div className="formulaire-container">
+      <form className="Formulaire">
         {/* Champs de formulaire */}
         <label htmlFor="CIVILISATION">Choisissez votre civilisation :</label>
         <input type="text" id="civilisation" name="civilisation" list="options" />
@@ -50,6 +52,7 @@ const Register = (props) => {
 
       {/* Bouton pour indiquer que l'utilisateur est Déjà membre */}
       <button onClick={() => setIsRegistered(true)}>Déjà membre ? Connectez-vous ici !</button>
+      </div>
     </>
   );
 }
