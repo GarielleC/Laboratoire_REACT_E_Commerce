@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-// import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Input from "../Inputs/inputs.jsx";
 import Register from "../Register/Register.jsx";
 
 const Login = (props) => {
-  const { isRegistered, setIsRegistered } = props;
+  const [isRegistered, setIsRegistered] = useState(false);
 
   const [inputValue, setInputValue] = useState({
     email: "",
@@ -28,9 +28,9 @@ const Login = (props) => {
   };
 
   // Si l'utilisateur est connecté, rediriger vers la page d'accueil
-  // if (isLoggedIn) {
-  //   return <Redirect to="/" />;
-  // }
+  if (isLoggedIn) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <>
