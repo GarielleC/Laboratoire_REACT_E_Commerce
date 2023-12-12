@@ -2,9 +2,10 @@
 .formulaire-container {
   flex-direction: column; /* Affiche les éléments en colonne */
   align-items: center; /* Centre le contenu horizontalement */
-  padding: 20px; /* Espace intérieur du conteneur */
+  padding: 10px; /* Espace intérieur du conteneur */
   display: flex;
-  margin-top: 20px; /* Ajoutez une marge en haut selon vos besoins */
+  margin-top: 10px; /* Ajoutez une marge en haut selon vos besoins */
+  margin: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   background-color: rgba(53, 39, 68, 0.77); /* Style pour la couleur de fond avec une transparence */
 }
@@ -18,12 +19,12 @@
   align-items: flex-start; /* Alignez les éléments du formulaire à gauche */
 
   label {
-      margin-bottom: 5px; /* Ajoutez une marge en bas à chaque étiquette */
+      margin-bottom: 1rem; /* Ajoutez une marge en bas à chaque étiquette */
   }
 
   input,
   button {
-      margin-bottom: 10px; /* Ajoutez une marge en bas à chaque champ de saisie et bouton */
+      margin-bottom: 1rem; /* Ajoutez une marge en bas à chaque champ de saisie et bouton */
   }
 }
 
